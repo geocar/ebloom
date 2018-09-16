@@ -111,6 +111,19 @@ serialize(_Ref) ->
 deserialize(_Bin) ->
     erlang:nif_error({error, not_loaded}).
 
+compatible(_Ref1, _Ref2) ->
+    erlang:nif_error({error, not_loaded}).
+
+predicted_elements(_Ref) ->
+    erlang:nif_error({error, not_loaded}).
+
+random_seed(_Ref) ->
+    erlang:nif_error({error, not_loaded}).
+
+desired_fpp(_Ref) ->
+    erlang:nif_error({error, not_loaded}).
+
+
 %% ===================================================================
 %% EUnit tests
 %% ===================================================================

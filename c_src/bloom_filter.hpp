@@ -235,7 +235,7 @@ public:
         the current number of inserted elements - not the user defined
         predicated/expected number of inserted elements.
       */
-      return std::pow(1.0 - std::exp(-1.0 * salt_.size() * inserted_element_count_ / size()), 1.0 * salt_.size());
+      return pow(1.0 - exp(-1.0 * salt_.size() * inserted_element_count_ / size()), 1.0 * salt_.size());
    }
 
    bloom_filter& operator &= (const bloom_filter& filter)
@@ -468,7 +468,7 @@ protected:
       double curr_m = 0.0;
       for(double k = 0.0; k < 1000.0; ++k)
       {
-         if ((curr_m = ((- k * predicted_element_count_) / std::log(1.0 - std::pow(desired_false_positive_probability_, 1.0 / k)))) < min_m)
+         if ((curr_m = ((- k * predicted_element_count_) / log(1.0 - pow(desired_false_positive_probability_, 1.0 / k)))) < min_m)
          {
             min_m = curr_m;
             min_k = k;
